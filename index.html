@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion To Emoji</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="welcome">Emotion To Emoji
+        <br>
+        <span>&#128522;</span>
+        <span>&#128512;</span>
+        <span>&#128532;</span>
+        <span>&#128546;</span>
+        <span>&#128545;</span>
+        <span>&#128548;</span>
+    </button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="font-bolder">Take your selfie To generate emoji</p>
+    <br>
+    <br>
+    <h3 class="askMood" id="yellow">Are you happy &#128522;</h3>
+    <br>
+    <h3 class="askMood" id="blueviolet">Are you confused &#x1f914;</h3>
+    <br>
+    <h3 class="askMood" id="red">Are you surprised &#x1F632;</h3>
+
+    <div class="mainContent">
+        <div class="webcam">
+            <label for="/">Webcam View -: </label>
+            <br>
+            <!-- The webcam div -->
+            <div id="webcam"></div>
+            <br>
+            <button id="takeSelfie" class="btn btn-success" onclick="takeSelfie()">Take selfie</button>
+        </div>
+        <div class="prediction">
+            <div class="prediction1">
+                <label for="/">Prediction 1 -:</label>
+                <p id="emotion_name1"></p>
+                <p id="emoji1" class="emoji"></p>
+            </div>
+            <div class="prediction2">
+                <label for="/">Prediction 2 -:</label>
+                <p id="emotion_name2"></p>
+                <p id="emoji2" class="emoji"></p>
+            </div>
+        </div>
+        <div id="result">
+            <label for="/">Snapshot</label>
+            <div id="snapshot"></div>
+            <br>
+            <button id="predict-mood" onclick="predict()" class="btn btn-primary">Predict mood</button>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js" integrity="sha512-AQMSn1qO6KN85GOfvH6BWJk46LhlvepblftLHzAv1cdIyTWPBKHX+r+NOXVVw6+XQpeW4LJk/GTmoP48FLvblQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+<script src="app.js"></script>
+<!-- <script src="app.js"></script> -->
+</html>
